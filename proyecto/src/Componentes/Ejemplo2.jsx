@@ -24,13 +24,13 @@ const agregarAlumno=(e)=>{
 
   //Agregar asistencia
     const agregarAsistencia=(id,cantidad)=>{
-        const listaActualizada=alumnos.map((alumno)=>
-            alumno.id===id
-            ? {...alumno,asistencia:alumno.asistencia+cantidad}
-            : alumno
-        );
-        setAlumnos(listaActualizada);
-    }
+    const listaActualizada=alumnos.map((alumno)=>
+        alumno.id===id
+        ? {...alumno,asistencia:alumno.asistencia+cantidad}
+        : alumno
+    );
+    setAlumnos(listaActualizada);
+}
 
   //Eliminar objeto 
     const eliminarObjeto=(id)=>{ 
@@ -40,20 +40,20 @@ const agregarAlumno=(e)=>{
 
   //Actualizar objeto
     const actualizarObjeto=(id)=>{
-        const nombreNuevo=prompt("Ingresa el nuevo nombre");
+    const nombreNuevo=prompt("Ingresa el nuevo nombre");
 
-        if(nombreNuevo===null || nombreNuevo.trim()===""){
-            return;
-        }
-
-        const listaActualizada=alumnos.map((alumno)=>
-            alumno.id===id
-            ? {...alumno,nombre:nombreNuevo}
-            : alumno
-        );
-
-        setAlumnos(listaActualizada);
+    if(nombreNuevo===null || nombreNuevo.trim()===""){
+        return;
     }
+
+    const listaActualizada=alumnos.map((alumno)=>
+        alumno.id===id
+        ? {...alumno,nombre:nombreNuevo}
+        : alumno
+    );
+
+    setAlumnos(listaActualizada);
+}
 
     return ( 
 <div style={{padding:"20px", maxWidth:"500px", margin:"0 auto"}}> 
@@ -79,7 +79,7 @@ const agregarAlumno=(e)=>{
                         <strong>{alumno.nombre}</strong> 
                         <br/> 
                         <span style={{fontSize:"12px", color:"#666"}}>Asistencias: {alumno.asistencia}</span> 
-                    </div>
+                    </div> 
 
                     <div>
                         <button onClick={()=>agregarAsistencia(alumno.id,1)}>1</button>
