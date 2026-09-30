@@ -56,7 +56,7 @@ const agregarAlumno=(e)=>{
 }
 
     return ( 
-<div style={{padding:"20px", maxWidth:"500px", margin:"0 auto"}}> 
+<div style={{padding:"20px", maxWidth:"800px", margin:"0 auto"}}> 
     <h1>Operaciones con arreglos</h1> 
     {/* Formuluario para agregar los datos */} 
     <form onSubmit={agregarAlumno} style={{marginBottom:"20px"}}> 
