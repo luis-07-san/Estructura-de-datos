@@ -1,11 +1,13 @@
-import Ejemplo2 from "./Componentes/Ejemplo2";
+/* import Ejemplo2 from "./Componentes/Ejemplo2";
 import EjemploArreglo from "./Componentes/EjemploArreglo";
-import pila from "./Componentes/pila";
+import pila from "./Componentes/pila"; */
+import PagePersonas from "./Componentes/pagePersonas";
 
 function App() {
   return (
     <>
-      <Ejemplo2/>
+      <h3>Separando los datos, la clase y la vista</h3>
+      <PagePersonas />
     </>
   );
 }
